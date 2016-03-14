@@ -1,0 +1,26 @@
+#!/bin/sh
+
+cat <<EOM >> .bashrc
+alias acse='apt-cache search '
+alias acsh='apt-cache show '
+alias af='apt-file '
+alias agd='apt-get dist-upgrade'
+alias agf='apt-get --fix-broken'
+alias agg='apt-get upgrade '
+alias agi='apt-get install '
+alias agr='apt-get remove'
+alias agu='apt-get update '
+alias asv='apt-show-versions -p'
+alias dx='dig -x '
+alias e='echo'
+alias kl='less /var/log/kern.log'
+alias kld='grep DROP /var/log/kern.log|less'
+alias l='ls $LS_OPTIONS -lA'
+alias ll='ls -l'
+alias ls='ls --color'
+alias na='newaliases'
+alias nmp='nmap -v -sS -O '
+
+alias wal='less /var/log/httpd/access.log'
+alias wel='less /var/log/httpd/error.log'
+EOM

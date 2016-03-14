@@ -1,0 +1,37 @@
+# Prepend/append register [/] to the paste if ^a^] is pressed.
+# This lets me have autoindent modes in vi(m).
+register [ "\033:se paste\015a"
+register ] "\033:se nopaste\015a"
+bind ^] paste [.]
+ 
+#kill startup message
+startup_message off
+ 
+# define a bigger scrollback, default is 100 lines
+defscrollback 1024
+ 
+# on Debian backspace should send char `177':
+# bindkey -k kb stuff "177"
+bindkey -k kb stuff ^H
+
+#It displays a status line at the bottom of the terminal which shows what window you're in and a li
+st of the other windows.
+#termcapinfo xterm "ks=E[?1lE:kuE[A:kd=E[B:kl=E[D:kr=E[C:kh=E[5~:kH=E [F"
+hardstatus alwayslastline "%{-b gk}%-w%{+b kg}%50>%n %t%{-b gk}%+w%<"
+ 
+#default windows
+screen -t root 0
+screen -t sh-1 1
+screen -t sh-2 2
+screen -t INFO-2 3
+screen -t stack-1 4
+screen -t stack-2 5
+screen -t stack-3 6
+screen -t virt-1 6
+screen -t virt-2 7
+screen -t virsh 8
+screen -t log 9
+
+activity "%C -> %n%f %t activity!"
+bell "%C -> %n%f %t bell!~"
+

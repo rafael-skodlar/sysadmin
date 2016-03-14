@@ -1,0 +1,14 @@
+System Administrator's Assistant README file
+
+This utility assists system administrator in most common tasks.
+
+===== Directory structure
+
+bin     scripts and configuration files
+etc     copies of configuration files from /etc subdirectories
+info    collection of personal and collected notes
+tmp     temporary directory that survives reboot (/tmp does not)
+var     similar to /var, mostly used for SAA log files, locks, pipes (?), etc.
+
+While more advanced menu could be made with Dialog,
+not all servers have it installed so this is a safer way to go.
